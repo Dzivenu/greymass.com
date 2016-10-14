@@ -3,7 +3,7 @@ locale: 'en'
 
 # Choose a theme by name
 blog:
-  theme: 'foundation6-default'
+  theme: 'greymass'
   title: 'reprint powered blog'
 
 # Blog Configuration
@@ -14,7 +14,7 @@ steem:
   accounts:
     'greymass':
       - post
-      - reblog
+      # - reblog
   # Only load posts with these tags
-  tags:
-    - greymass
+  # tags:
+  #   - greymass
