@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ blog['title'] }}</title>
+    <link rel="stylesheet" href="/themes/greymass/css/semantic.css">
+    <link href="{{ asset('themes/greymass/css/main.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('themes/greymass/css/styles.css') }}" rel="stylesheet" type="text/css" />
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="/themes/greymass/js/semantic.js"></script>
+    <script>
+    $(document)
+      .ready(function() {
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function() {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+              $('.fixed.menu').transition('fade out');
+            }
+          })
+        ;
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item')
+        ;
+      })
+    ;
+    </script>
+  </head>
+  <body>
+
+    {% include 'partials/menu/sidebar.html.twig' %}
+
+    <!-- Page Contents -->
+    <div class="pusher">
+      {% include 'partials/menu/main.html.twig' %}
+
+      {% block content '' %}
+
+      {% include 'partials/footer.html.twig' %}
+
+    </div>
+  </body>
+</html>
