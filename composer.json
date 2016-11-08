@@ -6,7 +6,8 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "greymass/reprint": "dev-develop"
+        "greymass/reprint": "dev-develop",
+        "greymass/steemphp": "dev-master"
     },
     "scripts": {
         "run": [

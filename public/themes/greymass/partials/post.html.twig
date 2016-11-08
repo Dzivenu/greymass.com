@@ -1,28 +1,64 @@
-<article class="ui vertical stripe segment">
-  <div class="ui middle aligned stackable grid container">
-    <div class="row">
-      <div class="eleven wide column">
-        <h3 class="ui header">
-          <a href="/{{ post.getCategory() }}/@{{ post.author }}/{{ post.permlink }}">
-            {{ post.title }}
-          </a>
-          <div class="sub header">
-            {{ "%datetime%" | trans({'%datetime%' : post.ts | date("d M Y")})}}
-            - 
-            {% for tag in post.getTags() %}
-              {% if tag %}
-              <a href="/tagged/{{ tag }}">
-                #{{ tag }}
-              </a>
-              {% endif %}
-            {% endfor %}
+<div class="ui middle aligned stackable grid container">
+  <div class="row">
+    <div class="column">
+      <article class="post">
+        <div class="ui basic segment">
+          {% for tag in post.getTags() %}
+            {% if tag %}
+            <a class="ui basic label" href="/tagged/{{ tag }}">
+              {{ tag }}
+            </a>
+            {% endif %}
+          {% endfor %}
+          <h1 class="ui huge dividing header">
+            <a href="/{{ post.getCategory() }}/@{{ post.author }}/{{ post.permlink }}">
+              {{ post.title }}
+            </a>
+            <div class="sub header">
+              <div class="ui celled horizontal huge list">
+                <div class="item">
+                  by
+                  <a href="">
+                    @{{ post.author }}
+                  </a>
+                </div>
+                <div class="item">
+                  {{ "%datetime%" | trans({'%datetime%' : post.ts | date("M d, Y, H:ia e")})}}
+                </div>
+              </div>
+            </div>
+          </h1>
+          <div class="ui grid">
+            <div class="row">
+              <div class="eleven wide column">
+                <div class="content">
+                  {{ post.html | raw }}
+                </div>
+              </div>
+              <div class="five wide column">
+                <!-- Begin MailChimp Signup Form -->
+                <div class="ui secondary segment" id="mc_embed_signup">
+                  <form class="ui form" action="//juicedb.us9.list-manage.com/subscribe/post?u=5c6ac9589ca09c0654249dd20&amp;id=e96d29c518" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                      <h2 class="ui header">
+                        Subscribe to our mailing list
+                        <div class="sub header">
+                          Get the latest news delivered and keep up to date on our development.
+                        </div>
+                      </h2>
+                      <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></div><div id="mce-responses" class="clear"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5c6ac9589ca09c0654249dd20_e96d29c518" tabindex="-1" value=""></div><div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="ui primary button" style="margin-top: 5px;">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+                <!--End mc_embed_signup-->
+              </div>
+            </div>
           </div>
-        </h3>
-        {{ post.html | raw }}
-      </div>
-      <div class="five wide right floated column">
-
-      </div>
+        </div>
+      </article>
     </div>
   </div>
-</article>
+</div>

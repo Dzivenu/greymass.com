@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c746d0eca0fa32eaf779d8c82096eda8",
-    "content-hash": "f0c03a7a601475900954378009bf1fa0",
+    "hash": "6dce5588ffa0e1815e14ec2b84974504",
+    "content-hash": "e9b791007d7efb96711e78cbd5540c76",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -610,6 +610,45 @@
                 "MIT"
             ],
             "time": "2016-10-13 00:54:55"
+        },
+        {
+            "name": "greymass/steemphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/greymass/steemphp.git",
+                "reference": "69be2d538cf547854cb83ce227bd4eae5b679903"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/greymass/steemphp/zipball/69be2d538cf547854cb83ce227bd4eae5b679903",
+                "reference": "69be2d538cf547854cb83ce227bd4eae5b679903",
+                "shasum": ""
+            },
+            "require": {
+                "fguillot/json-rpc": "^1.2",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Greymass\\SteemPHP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Cox",
+                    "email": "aaron.cox@greymass.com"
+                }
+            ],
+            "time": "2016-10-26 04:36:50"
         },
         {
             "name": "marcojanssen/silex-routing-service-provider",
@@ -3204,7 +3243,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "greymass/reprint": 20
+        "greymass/reprint": 20,
+        "greymass/steemphp": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

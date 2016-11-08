@@ -2,8 +2,10 @@
 
 {% block content %}
 
+<section class="main-content">
   {% for post in posts %}
     {% include 'partials/post/preview.html.twig' with { post: post, preview: true } %}
   {% endfor %}
+</section>
 
 {% endblock %}

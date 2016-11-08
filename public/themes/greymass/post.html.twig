@@ -3,10 +3,8 @@
 {% block content %}
 
 <section class="main-content full-post">
-  <div class="row text-center">
-    <div class="large-12 columns" role="content">
-      {% include 'partials/post.html.twig' with { post: post } %}
-    </div>
+  <div class="ui container" role="content">
+    {% include 'partials/post.html.twig' with { post: post } %}
   </div>
 </section>
 

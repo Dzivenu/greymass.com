@@ -21,7 +21,7 @@ h3.ui.header .sub.header
 }
 
 .ui.vertical.stripe {
-  padding: 8em 0em;
+  padding: 4em 0em;
 }
 .ui.vertical.stripe h3 {
   font-size: 2em;
@@ -52,8 +52,70 @@ h3.ui.header .sub.header
   padding: 5em 0em;
 }
 
-.secondary.pointing.menu .toc.item {
+.ui.vertical.segment {
+  border-bottom: none;
+}
+
+section.navigation {
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+section.navigation .ui.container .menu {
+  margin: 0;
+  padding: 1em 0;
+}
+
+section.navigation .ui.container .menu .toc.item {
   display: none;
+}
+
+section.main-content {
+  background-color: #e7e7e2;
+}
+
+section.main-content.full-post {
+  margin-top: 14px;
+}
+
+article.post {
+  margin: 24px 0;
+  background-color: #fff;
+}
+
+article.post .ui.huge.header > a {
+  color: #000;
+  font-size: 42px;
+  line-height: 52px;
+}
+
+article.post .ui.huge.header .sub.header {
+  margin: 16px 0;
+}
+
+article.post .content {
+  font-size: 18px;
+}
+
+article.post .content img {
+  max-width: 100%;
+}
+
+article.post .content pre>code {
+  display: block;
+}
+
+article.post .content code {
+  padding: .2rem;
+  font-size: 85%;
+  border-radius: 3px;
+  border: none;
+  background-color: #f4f4f4;
+  font-weight: inherit;
+}
+
+article.post .content ul li {
+  padding: 0.5em 0;
 }
 
 @media only screen and (max-width: 700px) {
